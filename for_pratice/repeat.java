@@ -1,3 +1,4 @@
+package for_pratice;
 import java.util.*;
 
 class Repeat{
