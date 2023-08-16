@@ -13,7 +13,7 @@ class Repeat{
         int n = sc.nextInt();
 
         int i = 1;
-        int sum = 0;    // 합
+        int sum = 0;    // 합 
 
         while(i <= n){
             sum += i;
