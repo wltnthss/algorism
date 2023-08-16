@@ -19,6 +19,15 @@ class Repeat{
             i ++;
         }
 
+        /*
+        for문으로는 아래와 같이 사용 가능.
+        int sum = 0;
+
+        for(int i=1; i<=n; i++){
+            sum += i;
+        }
+       */
+
         System.out.println("1부터 n까지의 합은 " + sum + " 입니다.");
     }
 }
