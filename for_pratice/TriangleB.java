@@ -15,6 +15,11 @@ public class TriangleB {
             n = sc.nextInt();
         }while(n <= 0);
         
+        triangleB(5);
+
+    }
+
+    public static void triangleB(int n){
         for(int i=1; i<=n; i++){
             for(int j=1; j<=i; j++){
                 System.out.print("*");
