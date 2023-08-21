@@ -28,11 +28,15 @@ public class ArrayEqual {
             b[i] = sc.nextInt();
         }
 
+        /*
+         * b의 모든 요소 a에 복사 추가
+         */
+        copy(a, b);
+
         System.out.println( 
             "배열 a와 b는 " + (equals(a, b) ? "같습니다." : 
                                             "같지 않습니다.")
         );
-        
     }
 
     public static boolean equals(int[] a, int[] b){
@@ -49,5 +53,21 @@ public class ArrayEqual {
             return false;
         }
         return true;
+    }
+
+    // 배열 복사 연습문제
+    public static void copy(int[] a, int[] b){
+        // 배열 b의 모든 요소를 배열 a에 복사.
+        int len = a.length <= b.length ? a.length : b.length;
+
+        for(int i=0; i<len; i++){
+            a[i] = b[i];
+
+            System.out.println("---------------------");
+            System.out.println("a[" + i + "] = " + a[i]);
+            System.out.println("b[" + i + "] = " + b[i]);
+        }
+
+        
     }
 }
