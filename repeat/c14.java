@@ -1,4 +1,8 @@
-public class Exam0201 {
+package repeat;
+
+import java.util.*;
+
+public class c14 {
   
   static int maxOf(int[] a) {
     int max = a[0];
