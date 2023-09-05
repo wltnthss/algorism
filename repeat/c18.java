@@ -24,11 +24,6 @@ public class c18 {
             arr2[i] = sc.nextInt();
         }
 
-        if(arr1.length != arr2.length){
-            System.out.println("배열에 담긴 요솟수가 같지 않습니다.");
-        }            
-
-
         if(!equalsArr(arr1, arr2)){
             System.out.println("배열 a와 b는 같지 않습니다.");
         }else{
@@ -36,6 +31,10 @@ public class c18 {
         }
     }
     public static boolean equalsArr(int[] a, int[] b){
+        if(a.length != b.length){
+            return false;
+        }   
+
         for(int i=0; i<a.length; i++){
             if(a[i] != b[i]){
                 return false;
