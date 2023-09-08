@@ -14,14 +14,14 @@ public class c19 {
             System.out.println("arr[" + i + "] : " + arr[i]);
         }
 
-        System.out.println();
+        System.out.println(); 
 
         int[] arr2 = arr.clone();
 
         rcopy(arr, arr2);
 
         for (int i =0; i < arr2.length; i++){
-            System.out.println("arr2[" + i + "] : " + arr2[i]);
+            System.out.println( "arr2[" + i + "] : " + arr2[i]);
         }
         
         
