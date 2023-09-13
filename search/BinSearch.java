@@ -33,28 +33,8 @@ public class BinSearch {
         System.out.print("검색할 값 : ");
         int key = sc.nextInt();
 
-        int result = binSearch(n, arr, key);
+        int result = Arrays.binarySearch(arr, key);
 
         System.out.println(key + "은(는) arr[" + result + "]에 있습니다." );
      }
-
-    private static int binSearch(int n, int[] arr, int key) {
-        
-        int first = 0;
-        int last = n - 1;
-        
-        do{
-            int mid = (first + last) / 2;
-            if(arr[mid] == key){
-                return mid;
-            }else if(arr[mid] < key){
-                first = mid + 1;
-            }else{
-                last = mid - 1;
-            }
-        }while(first <= last);
-
-
-        return -1;
-    }
 }
