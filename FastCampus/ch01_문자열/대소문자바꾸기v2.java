@@ -13,10 +13,11 @@ public class 대소문자바꾸기v2 {
 
         for(int i=0; i<input.length(); i++){
             if('A' <= input.charAt(i) && input.charAt(i) <= 'Z'){
-                System.out.print((char)('a' + input.charAt(i) - 'A'));
+                arr[i] = ((char)('a' + input.charAt(i) - 'A'));
             }else{
-                System.out.print((char)('A' + input.charAt(i) - 'a'));
+                arr[i] = ((char)('A' + input.charAt(i) - 'a'));
             }
         }
+        System.out.println(arr);
     }
 }
