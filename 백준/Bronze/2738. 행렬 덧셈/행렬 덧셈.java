@@ -1,51 +1,41 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
 
-	public static void main(String[] args)   {
+	public static void main(String[] args) throws IOException   {
 		
 		/*
 		 * N * M 크기 두 행렬 A,B 더하는 프로그램
 		 */
 		
-		Scanner sc= new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int N = sc.nextInt();
-		int M = sc.nextInt();
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
+		
 		int[][] A = new int[N][M];
-		int[][] B = new int[N][M];
-		int[][] C = new int[N][M];
 		
 		for (int i = 0; i < N; i++) {
+			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < M; j++) {
-				A[i][j] = sc.nextInt();
+				A[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
 		
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < M; j++) {
-				B[i][j] = sc.nextInt();
-			}
-		}	
+		StringBuffer sb = new StringBuffer();
 		
 		for (int i = 0; i < N; i++) {
+			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < M; j++) {
-				C[i][j] += A[i][j];
+				sb.append(A[i][j] + Integer.parseInt(st.nextToken()) + " ");
 			}
+			sb.append("\n");
 		}
-		
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < M; j++) {
-				C[i][j] += B[i][j];
-			}
-		}	
-		
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < M; j++) {
-				System.out.print(C[i][j] + " ");
-			}
-			System.out.println();
-		}	
-		
+		System.out.println(sb);
+		br.close();
 	}
 }
