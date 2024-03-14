@@ -17,13 +17,14 @@ public class Main {
 		 *  ouput : 첫째 줄부터 N개의 줄에 오름차순 정렬 결과 한 줄에 하나씩 출력
 		 */
 
-		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int N = sc.nextInt();
+		int N = Integer.parseInt(br.readLine());
+		
 		List<Integer> list = new ArrayList<Integer>();
 		
 		for(int i=0; i<N; i++) {
-			int num = sc.nextInt();
+			int num = Integer.parseInt(br.readLine());
 			list.add(num);
 		}
 		
