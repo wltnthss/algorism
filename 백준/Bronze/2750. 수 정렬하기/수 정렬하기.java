@@ -28,6 +28,6 @@ public class Main {
 		}
 		
 		Collections.sort(list);
-		list.forEach(i -> System.out.println(i));
+		list.forEach(System.out::println);
 	}
 }
