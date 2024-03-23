@@ -1,6 +1,6 @@
 # [level 0] 수열과 구간 쿼리 2 - 181923 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181923#qna) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181923) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 03월 23일 17:11:55
+2024년 03월 23일 17:12:07
 
 ### 문제 설명
 
