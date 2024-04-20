@@ -1,0 +1,22 @@
+-- 코드를 작성해주세요
+# SELECT 
+#     *
+# FROM 
+#     ITEM_INFO;
+    
+# SELECT 
+#     IT.ITEM_ID, IT.*
+# FROM 
+#     ITEM_TREE IT;
+    
+SELECT 
+    II.ITEM_ID, II.ITEM_NAME
+FROM 
+    ITEM_INFO II,
+    ITEM_TREE IT
+WHERE   
+    1=1
+    AND II.ITEM_ID = IT.ITEM_ID
+    AND IT.PARENT_ITEM_ID IS NULL
+ORDER BY 
+    II.ITEM_ID
