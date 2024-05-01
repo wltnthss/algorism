@@ -5,4 +5,3 @@ FROM
 WHERE 
     1=1
     AND LENGTH IS NULL
-    OR LENGTH <= 10
