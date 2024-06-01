@@ -1,0 +1,11 @@
+-- 코드를 입력하세요
+SELECT
+    B.ingredient_type, SUM(TOTAL_ORDER) TOTAL_ORDER
+FROM 
+    FIRST_HALF A, ICECREAM_INFO B
+WHERE 
+    A.FLAVOR = B.FLAVOR
+GROUP BY 
+    B.ingredient_type
+ORDER BY 
+    TOTAL_ORDER
