@@ -1,0 +1,24 @@
+-- 코드를 입력하세요
+
+SELECT 
+    C.LV HOUR, NVL(CNT, 0) COUNT
+FROM 
+    (
+        SELECT
+            EXTRACT(HOUR FROM TO_TIMESTAMP(TO_CHAR(DATETIME, 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD HH24:MI:SS')) HOUR,
+            COUNT(ANIMAL_ID) AS CNT
+        FROM 
+            ANIMAL_OUTS A 
+        GROUP BY 
+            EXTRACT(HOUR FROM TO_TIMESTAMP(TO_CHAR(DATETIME, 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD HH24:MI:SS'))
+    ) B RIGHT OUTER JOIN 
+    (
+        SELECT 
+            LEVEL - 1 LV
+        FROM 
+            DUAL
+        CONNECT BY LEVEL <= 24 
+    ) C
+    ON B.HOUR = C.LV
+ORDER BY 
+    C.LV
